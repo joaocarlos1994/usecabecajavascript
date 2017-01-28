@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Use cabeça Java Script</title>
+		<script>
+		
+			var fiat = {
+				make: "Fiat",
+				model: "500",
+				year: 1957,
+				color: "Medium Blue",
+				passengers: 2,
+				convertible: 88000,
+				started: false,
+				
+				start: function() {
+					this.started = true;
+				},
+				
+				stop: function() {
+					this.started = false;
+				},
+				
+				drive: function() {
+					if (this.started) {
+						alert("Zom zom!");
+					} else {
+						alert("You need to start the engine firts.");
+					}
+				}
+			};
+			
+			fiat.drive();
+			fiat.start();
+			fiat.drive();
+			fiat.stop();
+			
+		</script>
+	</head>
+	<body>
+		<h1>Começando</h1>
+	</body>
+</html>		
