@@ -3,45 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Example Four</title>
-	<script>
-		// Quando voce esta lidando com o DOM e importante executar seu codigo apenas depois da pagina estar totalmente carregada
-		// Se voce nao fizer, ha uma boa chance de o DOM nao ter sido criado na hora que seu codigo executar
-		
-		// Nesse exemplo o navegador o codigo javascript esta no tag head, assim o navegador comecar executar mesmo antes de achar
-		// o elemento com id greenplanet, sendo assim quando haver a chamada de getElementById ira retornar null.
-		//
-		// var planet = document.getElementById("greenplanet");
-		// planet.innerHTML = "Red Alert: hit by phaser fire!";
-		//
-		// Para resolver esse problema e necessario criar uma funcao e atribuir o codigo que deseja executar a ela.
-		// Depois de ter feito isso, pegue o OBJETO window e atribua a funcao a sua propriedade ONLOAD.
-		// O objeto window vai chamar qualquer funcao qualquer funcao que voce tenha atribuido a sua propriedade ONLOAD,
-		// mas apenas DEPOIS QUE A PAGINA ESTIVER TOTALMENTE CARREGADA
-		//
-		// Obs.: O objeto window e interno ao JavaScript. Ele representa a janela do navegador
-		
-		function init() {
-			var planet = document.getElementById("greenplanet");
-			planet.innerHTML = "Red Alert: hit by phaser fire!";
-		}
-		
-		window.onload = init;
-		
-	</script>  
+  	<script>
+  		// Quando voce esta lidando com o DOM e importante executar seu codigo apenas depois da pagina estar totalmente carregada
+  		// Se voce nao fizer, ha uma boa chance de o DOM nao ter sido criado na hora que seu codigo executar
+
+  		// Nesse exemplo o navegador o codigo javascript esta no tag head, assim o navegador comecar executar mesmo antes de achar
+  		// o elemento com id greenplanet, sendo assim quando haver a chamada de getElementById ira retornar null.
+  		//
+  		// var planet = document.getElementById("greenplanet");
+  		// planet.innerHTML = "Red Alert: hit by phaser fire!";
+  		//
+  		// Para resolver esse problema e necessario criar uma funcao e atribuir o codigo que deseja executar a ela.
+  		// Depois de ter feito isso, pegue o OBJETO window e atribua a funcao a sua propriedade ONLOAD.
+  		// O objeto window vai chamar qualquer funcao qualquer funcao que voce tenha atribuido a sua propriedade ONLOAD,
+  		// mas apenas DEPOIS QUE A PAGINA ESTIVER TOTALMENTE CARREGADA
+  		//
+  		// Obs.: O objeto window e interno ao JavaScript. Ele representa a janela do navegador
+
+  		function init() {
+  			var planet = document.getElementById("greenplanet");
+  			planet.innerHTML = "Red Alert: hit by phaser fire!";
+  		}
+
+  		window.onload = init;
+  	</script>
   </head>
   <body>
-	  
-	<h2>Green Planet</h2>
+    <h2>Green Planet</h2>
     <p id="greenplanet">
       All is well
     </p>
 
-	<h2>Red Planet</h2>  
+    <h2>Red Planet</h2>
     <p id="redplanet">
       Nothing to report
     </p>
-	  
-	<h2>Blue Planet</h2>
+
+    <h2>Blue Planet</h2>
     <p id="blueplanet">
       All system A-OK
     </p>

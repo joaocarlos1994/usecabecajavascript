@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Numero de Telefone</title>
+  	<script>
+      function validate(phoneNumber) {
+
+        if (phoneNumber.length > 8 || phoneNumber.length < 7) {
+          return false;
+        }
+
+        var first = phoneNumber.substring(0, 3);
+        var second = phoneNumber.substring(phoneNumber.length - 4);
+
+        if (isNaN(first) || isNaN(second)) {
+          return false;
+        }
+
+        if (phoneNumber.length === 8) {
+          return (phoneNumber.charAt(3) === "-");
+        }
+        return true;
+      }
+
+      function validateCorret(phoneNumber) {
+        if (phoneNumber.length === 7) {
+          return Number(phoneNumber) > 0;
+        }
+        var phoneNumerSplit = phoneNumber.split("-");
+        return phoneNumerSplit.length === 2 && Number(phoneNumerSplit[0]) <= 999 && Number(phoneNumerSplit[1]) <= 9999;
+      }
+
+      console.log("Value 1-234567: " + validateCorret("1-234567"));
+      console.log("Value -123567: " + validateCorret("-123567"));
+      console.log("Value 123-4567: " + validateCorret("123-4567"));
+      console.log("Value 123+4567: " + validateCorret("123+4567"));
+      console.log("Value 123-45674343434343: " + validateCorret("123-45674343434343"));
+      console.log("Value -1234567: " + validateCorret("-1234567"));
+      console.log("Value 12-34567: " + validateCorret("12-34567"));
+      console.log("Value 12-34-56: " + validateCorret("12-34-56"));
+  	</script>
+  </head>
+  <body>
+  </body>
+</html>
