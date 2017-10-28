@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Planets with colors</title>
+    <meta charset="utf-8">
+    <style>
+      .redtext { color: red; }
+    </style>
+    <script>
+      function init() {
+        var planet = document.getElementById("greenplanet");
+        if (planet !== null) {
+          planet.innerHTML = "Red Alert: hit by phaser fire!";
+
+          /**
+            Pegamos o objeto atraves da funcao da funcao getElementById,
+            depois de verificar se o mesmo nao e null, podemos mudar
+            seu atributo atraves do metodo setAttribute, esse metodo
+            recebe dois argumentos, o nome do atributo que voce quer
+            definir ou mudar, e o valor que voce deseja dar a esse
+            atributo, caso ele nao exista ele sera criado;
+          **/
+          planet.setAttribute("class", "redtext");
+
+          /**
+            Tambem podemos pegar um atributo de um determinado objeto,
+            atraves da funcao getAttribute, onde o primeiro argumento
+            e o atributo que deseja recurpear
+          **/
+          var scoop = planet.getAttribute("class");
+          console.log(scoop);
+        }
+      }
+      window.onload = init;
+    </script>
+  </head>
+  <body>
+
+    <h1>Green Planet</h1>
+    <p id="greenplanet">All is well</p>
+
+    <h1>Red Planet</h1>
+    <p id="redplanet">Nothing to report</p>
+
+    <h1>Blue Planet</h1>
+    <p id="blueplanet">All systems A-OK</p>
+
+  </body>
+</html>
