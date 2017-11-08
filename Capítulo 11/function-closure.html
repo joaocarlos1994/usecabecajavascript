@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Function Closure</title>
+  	<script>
+      function makeTimer(doneMessage, n) {
+        setTimeout(function() {
+          alert(doneMessage);
+        }, n);
+      }
+      makeTimer("Cookies are done!", 1000);
+  	</script>
+  </head>
+  <body>
+  </body>
+</html>

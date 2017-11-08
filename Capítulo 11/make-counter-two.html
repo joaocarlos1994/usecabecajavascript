@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Make Counter Two</title>
+  	<script>
+      function makeCounter() {
+        var count = 0;
+        return {
+          increment: function() {
+            count++;
+            return count;
+          }
+        };
+      }
+      var plus = makeCounter();
+      console.log(plus.increment());
+      console.log(plus.increment());
+      console.log(plus.increment());
+  	</script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mult</title>
+  	<script>
+      function multN(n) {
+        return function mult(m) {
+          return n * m;
+        }
+      }
+      var multiplcar = multN(8);
+      console.log(multiplcar(5));
+      console.log(multiplcar(8));
+      console.log(multiplcar(7));
+  	</script>
+  </head>
+  <body>
+  </body>
+</html>
