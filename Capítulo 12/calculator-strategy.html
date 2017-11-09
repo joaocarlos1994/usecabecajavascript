@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+  	<script>
+
+      var plus = function(num1, num2) {
+        return num1 + num2;
+      }
+
+      var subtraction = function(num1, num2) {
+        return num1 - num2;
+      }
+
+      var multiplication = function(num1, num2) {
+        return num1 * num2;
+      }
+
+      var division = function(num1, num2) {
+        return num1 / num2;
+      }
+
+      function calculator(num1, num2) {
+        var operations = new Map();
+        operations.set("+", plus);
+        operations.set("-", subtraction);
+        operations.set("*", multiplication);
+        operations.set("/", division);
+
+        var calculate = function(operation) {
+          var op = operations.get(operation);
+          return op(num1, num2);
+        }
+
+        return calculate;
+      }
+
+      var calcular = calculator(1, 2);
+      console.log(calcular("+"));
+
+      var calcular = calculator(1, 2);
+      console.log(calcular("-"));
+
+      var calcular = calculator(8, 8);
+      console.log(calcular("*"));
+
+      var calcular = calculator(25, 5);
+      console.log(calcular("/"));
+
+  	</script>
+  </head>
+  <body>
+  </body>
+</html>
