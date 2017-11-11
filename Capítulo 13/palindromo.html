@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Palimdrome</title>
+  	<script>
+      String.prototype.palindromo = function() {
+        var palindromoString = "";
+        for (var i = this.length; i > 0; i--) {
+          palindromoString += this.charAt(i - 1);
+        }
+        return this.valueOf() === palindromoString;
+      }
+
+      var phrases = ["eve", "kayak", "mom", "wow", "Not a palindrome"];
+      for (var i = 0; i < phrases.length; i++) {
+        var phrase = phrases[i];
+        if (phrase.palindromo()) {
+          console.log("'" + phrase + "' is a palindrome");
+        } else {
+          console.log("'" + phrase + "' is NOT a palindrome");
+        }
+      }
+  	</script>
+  </head>
+  <body>
+  </body>
+</html>
